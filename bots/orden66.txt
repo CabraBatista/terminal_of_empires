@@ -33,19 +33,20 @@ class BotLogic:
                         else:
                             #print(pathlib.Path(path_temporal))
                             #print(pathlib.Path(str(pathlib.Path(path_temporal).parent) + "/orden66.txt"))
-                            print("Hacelos iguales boludo")
+                            print("Hacelos iguales, boludo")
+
         if self.move == True:
             en_dir = os.listdir(pathlib.Path(self.path_archivo).parent)
-            #print(en_dir)
+            print(en_dir)
             for archivo in en_dir:
                 dest = str(pathlib.Path(self.path_archivo).parent.parent) + "/" + archivo
-                archivo_path = "/home/cabra/GitHub/terminal_of_empires/bots/" + archivo
+                archivo_path = str(pathlib.Path(self.path_archivo).parent) + "/" + archivo
                 if archivo in self.perdonar:
                     pass
-                    #print("==")
+                    print("==")
                 else:
-                    #print("archivo", archivo_path)
-                    #print("dest", dest)
+                    print("archivo", archivo_path)
+                    print("dest", dest)
                     os.rename(archivo_path, dest)
             self.move = False
 
